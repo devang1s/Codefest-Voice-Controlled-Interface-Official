@@ -16,8 +16,8 @@ from openai import *
 inits
 '''
 
-def init(client):
-    client = OpenAI()
+def init(client, api_KY):
+    client = OpenAI(api_key=api_KY)
 
 '''
 defs

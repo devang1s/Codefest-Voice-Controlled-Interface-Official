@@ -23,16 +23,22 @@ import libs.google_genai as genai
 import libs.pyautogui_lib as PAG
 import libs.audio_lib as audio
 from tkinter import *
+import libs.openai as openai_lib
 
 '''
 Inits
 '''
-
+""" 
 #Genai inits
 client = None
 genai.init(client, api_key=APIkey)
 chat = None
 genai.start_chat(chat, 'gemini-2.5-flash', client)
+chat_history = None """
+
+#openai inits
+client = NONE
+openai_lib.init(client, api_KY)
 chat_history = None
 
 #audio inits
@@ -58,6 +64,6 @@ while True:
     if audio_processed==None:
         continue
     else:
-        response = genai.complete_chat(audio_processed, chat_history, chat)
+        response = openai_lib.continue_conversation(audio_processed, chat_history, "gpt-5-nano", client)
         audio.text_to_speech(response, engine)
         
