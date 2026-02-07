@@ -19,7 +19,7 @@ import speech_recognition as sr
 #inits
 
 engine = init()
-r = sr.Recogniser()
+r = sr.Recognizer()
 
 #functions
 
