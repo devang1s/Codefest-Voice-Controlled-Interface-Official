@@ -38,7 +38,7 @@ chat_history = None """
 
 #openai inits
 client = NONE
-openai_lib.init(client, "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")
+openai_lib.init(client, key)
 chat_history = None
 
 #audio inits
