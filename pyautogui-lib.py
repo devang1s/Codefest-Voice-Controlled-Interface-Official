@@ -40,7 +40,7 @@ def mouse_move(distanceX, distanceY, currentMouseX, currentMouseY, screenWidth, 
 
     pyautogui.moveTo(newMouseX, newMouseY)
 
-def mouse_other_click(type, distanceX, distanceY, currentMouseX, currentMouseY, screenWidth, screenHeight):
+def mouse_other_click(type, distanceX=None, distanceY=None, currentMouseX=None, currentMouseY=None, screenWidth=None, screenHeight=None):
     if type=='double_click':
 
         pyautogui.doubleClick()
@@ -62,6 +62,6 @@ def mouse_other_click(type, distanceX, distanceY, currentMouseX, currentMouseY, 
 
         pyautogui.dragTo(newMouseX, newMouseY)   
 
-def keyboard_action():
+def keyboard_action(action, input):
     pass
 
