@@ -31,6 +31,9 @@ Inits
 #Genai inits
 client = None
 genai.init(client)
+chat = None
+genai.start_chat(chat, 'gemini-2.5-flash', client)
+chat_history = None
 
 #audio inits
 engine = None
@@ -41,9 +44,20 @@ audio.init(engine, r)
 Tkinter inits
 '''
 
-root = Tk()
+""" root = Tk()
 root.geometry('50x300')
 root.title('TitanAI - The world\'s most powerful AI assistant')
+canvas = Canvas(root, width=300, height=50, bg='black')
 
+root.mainloop() """
 
-root.mainloop()
+#to be continued...
+
+while True:
+    audio_processed = audio.speech_to_text(r)
+    if audio_processed==None:
+        continue
+    else:
+        response = genai.complete_chat(audio_processed, chat_history, chat)
+        audio.text_to_speech(response, engine)
+        

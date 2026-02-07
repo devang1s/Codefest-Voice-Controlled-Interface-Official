@@ -30,7 +30,7 @@ Defs
 
 #Speech to text
 
-def speech_to_text():
+def speech_to_text(r):
 
     #Initialise mic and capture audio
 
