@@ -8,17 +8,17 @@ Imports
 
 Pip statements
 
-pip install google-generativeai
+pip install google-genai
 '''
 
-import google.generativeai as genai
+import google.genai as genai
 
 '''
 Inits
 '''
 
-def init(client):
-    client = genai.Client()
+def init(client, api_key):
+    client = genai.Client(api_key=api_key)
     return client
 
 '''

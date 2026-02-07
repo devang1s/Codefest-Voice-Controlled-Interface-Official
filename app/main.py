@@ -7,14 +7,14 @@ Imports
 
 pip statements
 
-pip install google-generativeai
+pip install google-genai
 pip install pyttsx3
 pip install pyaudio
 pip install SpeechRecognition
 pip install pyautogui
 '''
 
-from google.generativeai import * # type: ignore
+from google.genai import * # type: ignore
 from pyttsx3 import *# type: ignore
 from pyaudio import *# type: ignore
 from speech_recognition import *# type: ignore
@@ -30,7 +30,7 @@ Inits
 
 #Genai inits
 client = None
-genai.init(client)
+genai.init(client, api_key="AIzaSyDaXGMRTPQzywNwP91TfaeqSf6hMfjn0i4")
 chat = None
 genai.start_chat(chat, 'gemini-2.5-flash', client)
 chat_history = None
