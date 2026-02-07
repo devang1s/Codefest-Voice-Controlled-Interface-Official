@@ -40,3 +40,4 @@ def speech_to_text():
 
     return output
 
+print(speech_to_text())
