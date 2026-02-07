@@ -14,12 +14,12 @@ pip install SpeechRecognition
 pip install pyautogui
 '''
 
-from google.genai import * # type: ignore
+# from google.genai import * # type: ignore
 from pyttsx3 import *# type: ignore
 from pyaudio import *# type: ignore
 from speech_recognition import *# type: ignore
 from pyautogui import *# type: ignore
-import libs.google_genai as genai
+# import libs.google_genai as genai
 import libs.pyautogui_lib as PAG
 import libs.audio_lib as audio
 from tkinter import *
@@ -38,7 +38,7 @@ chat_history = None """
 
 #openai inits
 client = NONE
-openai_lib.init(client, api_KY)
+openai_lib.init(client, "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")
 chat_history = None
 
 #audio inits
