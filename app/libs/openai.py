@@ -24,9 +24,11 @@ defs
 '''
 
 def generate_response(client, model, prompt):
-    response = client.responses.create(model=model, prompt=prompt)
+    response = client.responses.create(model=model, input=prompt)
     return response.output_text
 
-client = None
-init(client)
-print(generate_response(client, 'gpt-5-nano', 'Hi.'))
+def continue_conversation(prompt, chat_history, model, client):
+    chat_history = chat_history + [{"role":"user", "content":prompt}]
+    response = client.responses.create(model=model, input=chat_history)
+    chat_history = chat_history + [{"role":"assistant", "content":response.text}]
+    return response.text

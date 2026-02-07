@@ -30,7 +30,7 @@ Inits
 
 #Genai inits
 client = None
-genai.init(client, api_key="AIzaSyDaXGMRTPQzywNwP91TfaeqSf6hMfjn0i4")
+genai.init(client, api_key=APIkey)
 chat = None
 genai.start_chat(chat, 'gemini-2.5-flash', client)
 chat_history = None
