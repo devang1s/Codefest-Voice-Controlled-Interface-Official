@@ -36,8 +36,9 @@ def speech_to_text():
     except sr.UnknownValueError:
         output = "Audio error - could not understand audio"
     except sr.RequestError as e:
-        output = f"System error. API error: {e}"
+        output = f"System error. Error type: API error: {e}"
 
     return output
 
-print(speech_to_text())
+def text_to_speech(InputText, EngineVar):
+    pass
