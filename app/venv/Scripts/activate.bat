@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\devan\OneDrive\Documents\GitHub\Codefest-2D-Shootout-Official\venv
+set VIRTUAL_ENV=C:\Users\devan\OneDrive\Documents\GitHub\Codefest-Voice-Controlled-Interface-Official\app\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

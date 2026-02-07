@@ -11,13 +11,15 @@ Pip statements
 pip install google-generativeai
 '''
 
-import google.genai as genai
+import google.generativeai as genai
 
 '''
 Inits
 '''
 
-client = genai.Client()
+def init(client):
+    client = genai.Client()
+    return client
 
 '''
 Defs

@@ -20,8 +20,9 @@ import speech_recognition as sr
 Inits
 '''
 
-engine = init()
-r = sr.Recognizer()
+def init(engine, r):
+    engine = sr.init()
+    r = sr.Recognizer()
 
 '''
 Defs
