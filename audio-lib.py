@@ -1,9 +1,9 @@
 '''
-lib for audio functions
+Lib for audio functions
 '''
 
 '''
-imports
+Imports
 
 pip install statements
 
@@ -16,19 +16,30 @@ from pyttsx3 import *
 from pyaudio import *
 import speech_recognition as sr
 
-#inits
+'''
+Inits
+'''
 
 engine = init()
 r = sr.Recognizer()
 
-#functions
+'''
+Defs
+'''
+
+#Speech to text
 
 def speech_to_text():
+
+    #Initialise mic and capture audio
+
     with sr.Microphone() as source:
         print("Adjusting for ambient noise...")
         r.adjust_for_ambient_noise(source, duration=0.5)
         print("Speak now...")
         audio = r.listen(source)
+
+    #Process audio
 
     try:
         text = r.recognize_google(audio)
@@ -38,9 +49,16 @@ def speech_to_text():
     except sr.RequestError as e:
         output = f"System error. Error type: API error: {e}"
 
+    #Return output
+
     return output
 
+#Text to speech
 
 def text_to_speech(InputText, EngineVar):
+
+    #Process text to speech
     EngineVar.say(InputText)
+
+    #Speak the text
     EngineVar.runAndWait()
