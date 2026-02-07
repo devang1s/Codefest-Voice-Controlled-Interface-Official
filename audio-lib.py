@@ -41,4 +41,7 @@ def speech_to_text():
     return output
 
 def text_to_speech(InputText, EngineVar):
-    pass
+    EngineVar.say(InputText)
+    EngineVar.runAndWait()
+
+text_to_speech("Devang, Siddarth, Ananda, Aarav where is my water lil brrrr ???", engine)
