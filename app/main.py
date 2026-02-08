@@ -37,8 +37,6 @@ chat = None
 genai.start_chat(chat, 'gemini-2.5-flash', client)
 chat_history = None """
 
-#load .env into os.environ
-
 #openai inits
 client = openai.OpenAI(api_key='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')
 chat_history = []
@@ -60,11 +58,16 @@ root.mainloop() """
 
 #to be continued...
 
-while True:
+""" while True:
     audio_processed = audio.speech_to_text(r)
     if audio_processed==None:
         continue
     else:
         response = openai_lib.continue_conversation(audio_processed, chat_history, "gpt-5-nano", client)
-        audio.text_to_speech(response, engine)
+        audio.text_to_speech(response, engine) """
         
+
+#communication stuff
+
+chat_history = [{"role":"developer", "content":"You are an ai voice assisstant that is trained to give commands to navigate the user's screen for them. In the next prompt, yoou will receive the instructions for the format of the instructions you will output to the system."}
+                {"role":"developer", "content":"In the start of the response, you will respond with 7 variables. If a variable is not required, then you will replace it with 'None'. The 7 variables are: Action - it tells the system what to do  out of the vague category of actions, out of: 'mouse_click' (single click left mouse button), 'mouse_move' (moves the mouse cursor to another position), 'mouse_other_click' (double click or click and drag), 'keyboard_action' (press a key, type text, or perform a keyboard shortcut) "}]

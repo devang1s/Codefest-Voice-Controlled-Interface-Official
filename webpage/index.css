@@ -1,7 +1,18 @@
-.table_item_action{
-    background-color: cyan;
+h1{ 
+ color:red;
+ font-weight:bold;
+}
+h2{
+ color:blue;
+}
+p{
+ font-size:20px;
+ color:brown;
+}
+ .yellow{
+    color:yellow;
 }
 
-.table_item_command{
-    background-color: blue;
+body{
+    background-color:black;
 }
