@@ -24,6 +24,7 @@ import libs.pyautogui_lib as PAG
 import libs.audio_lib as audio
 from tkinter import *
 import libs.openai as openai_lib
+import openai
 
 '''
 Inits
@@ -31,20 +32,20 @@ Inits
 """ 
 #Genai inits
 client = None
-genai.init(client, api_key=APIkey)
+genai.init(client, api_key='APIKEY')
 chat = None
 genai.start_chat(chat, 'gemini-2.5-flash', client)
 chat_history = None """
 
+#load .env into os.environ
+
 #openai inits
-client = NONE
-openai_lib.init(client, key)
-chat_history = None
+client = openai.OpenAI(api_key='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')
+chat_history = []
 
 #audio inits
-engine = None
-r = None
-audio.init(engine, r)
+engine = init()
+r = Recognizer()
 
 '''
 Tkinter inits

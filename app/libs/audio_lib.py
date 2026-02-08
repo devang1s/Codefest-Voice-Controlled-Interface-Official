@@ -12,7 +12,7 @@ pip install pyaudio
 pip install SpeechRecognition 
 '''
 
-from pyttsx3 import *
+import pyttsx3
 from pyaudio import *
 import speech_recognition as sr
 
@@ -21,7 +21,7 @@ Inits
 '''
 
 def init(engine, r):
-    engine = sr.init()
+    engine = pyttsx3.init()
     r = sr.Recognizer()
 
 '''
