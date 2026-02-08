@@ -29,6 +29,8 @@ def generate_response(client, model, prompt):
 
 def continue_conversation(prompt, chat_history, model, client):
     chat_history = chat_history + [{"role":"user", "content":prompt}]
-    response = client.chat.completions.create(model=model, messages=chat_history)
-    chat_history = chat_history + [{"role":"assistant", "content":response.text}]
-    return response.text
+    response1 = client.chat.completions.create(model=model, messages=chat_history)
+    response = response1.choices[0].message.content.strip()
+    if response!=None:
+        chat_history = chat_history + [{"role":"assistant", "content":response}]
+        return response
